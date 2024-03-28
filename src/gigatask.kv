@@ -1,0 +1,28 @@
+MDFloatLayout:
+    MDLabel:
+        id: task_label
+        halign: 'center'
+        markup: True
+        text: "[size=30][b]GigaTask[/b][/size]"
+        pos_hint: {'y': .40}
+        font_name: "src/fonts/Poppins-SemiBoldItalic.ttf"
+
+    ScrollView:
+        pos_hint: {'center_y': .5, 'center_x': .5}
+        size_hint: .9, .8
+        
+        MDList:
+            id: container
+
+    MDFloatingActionButton:
+        icon: 'plus-thick'
+        on_release: app.show_task_menu()
+        elevation_normal: 10
+        pos_hint: {'x': .75, 'y':.15}
+        height: "130dp"
+<TaskCreationMenu>:
+    orientation: "horizontal"
+    spacing: "10dp"
+    size_hint: 1, None
+    height: "200dp"
+
